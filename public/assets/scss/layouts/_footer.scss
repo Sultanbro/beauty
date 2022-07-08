@@ -1,0 +1,177 @@
+footer {
+  padding-top: 80px;
+  padding-bottom: 66px;
+  margin-left: $screenSpace;
+  margin-right: $screenSpace;
+  background-color: #4b4e53;
+
+    @media (max-width: $mobile) {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+}
+
+.footer-top {
+  padding-bottom: 60px;
+
+    .column {
+
+        @media (max-width: $mobile) {
+            flex: 0 0 100%;
+
+            &:nth-child(1) {
+                .footer-nav-column {
+                    display: flex;
+                    margin-bottom: 40px;
+                    .footer-nav-title {
+                        flex: 1 0 auto;
+                    }
+                    .footer-nav-info {
+                        margin-left: 15px;
+                        border-left: 1px solid rgba(255,255,255, 0.7);
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $mobile) {
+        padding-bottom: 30px;
+    }
+}
+
+.footer-nav-title {
+  margin-bottom: 32px;
+
+    img {
+        width: 100px;
+        filter: brightness(0) invert(1);
+    }
+}
+
+.footer-nav-links {
+
+  a {
+    margin-bottom: 15px;
+      transition: all 0.3s ease;
+
+      &:hover {
+          color: $whiteColor;
+      }
+  }
+}
+
+.footer-nav-info {
+
+  .phone {
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      a {
+          transition: all 0.3s ease;
+
+          &:hover {
+              color: $whiteColor;
+          }
+      }
+  }
+}
+
+.subscribe-form {
+  margin-bottom: 20px;
+  input {
+    border: 0;
+    outline: none;
+    margin-right: 50px;
+    border-bottom: 1px solid $whiteColor;
+    background: none;
+
+      @media (max-width: $mobile) {
+          margin-right: 0;
+          margin-bottom: 30px;
+      }
+  }
+    @media (max-width: $mobile) {
+        flex-flow: column;
+    }
+    button {
+        justify-content: center;
+    }
+}
+
+.footer-bottom-main {
+  padding-top: 32px;
+  border-top: 1px solid #d7d7d7;
+}
+
+.footer-socials {
+
+  a {
+    margin-left: 30px;
+      opacity: 0.65;
+      transition: all 0.3s ease;
+
+      &:hover {
+          opacity: 1;
+      }
+  }
+    img {
+        height: 16px;
+    }
+}
+
+.search-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0, 0.8);
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    form {
+        position: relative;
+        border-bottom: 1px solid $whiteColor;
+    }
+
+    input {
+        outline: none;
+        width: 100%;
+        background: none;
+        border: 0;
+    }
+    button {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        border: 0;
+        cursor: pointer;
+        background: none;
+    }
+    .row {
+        width: 100%;
+    }
+}
+
+.close-search {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+
+    img {
+        width: 25px;
+        filter: brightness(0) invert(1);
+    }
+}

@@ -1,0 +1,261 @@
+h1 {
+  margin: 0;
+    @include font(25, 1.23, #4b4e53, 300, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.7rem, 1.875rem);
+}
+
+h2 {
+  margin: 0;
+
+  &.extraLight {
+      margin-bottom: 1%;
+      @include font(25, 1.23, currentColor, 200, uppercase, $Mont);
+      @include fluid-font($xSmall, $xxxLarge, 2.2rem, 3.4375rem);
+  }
+  &.light {
+     @include font(25, 1.23, currentColor, 300, uppercase, $Mont);
+      @include fluid-font($xSmall, $xxxLarge, 2.2rem, 3.4375rem);
+  }
+  &.bold {
+    @include font(25, 1, currentColor, 700, uppercase, $Mont);
+      @include fluid-font($xSmall, $xxxLarge, 3.2rem, 6.25rem);
+
+    span {
+      display: block;
+      font-weight: 300;
+    }
+  }
+}
+
+h3 {
+  margin: 0;
+    @include font(18, 1.46, $whiteColor, 600, 0, $Mont);
+    @include fluid-font($large, $xxxLarge, 2rem, 2rem);
+}
+
+.description {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  @include font(15, 1.46, #7e8082, 400, 0, $OpenSans);
+}
+
+.title {
+  @include font(24, 1.2, $whiteColor, 300, 0, $Mont);
+    @include fluid-font($large, $xxxLarge, 2.2rem, 3rem);
+}
+
+.info-description {
+    @include font(15, 1.46, #7e8082, 400, 0, $OpenSans);
+}
+
+.small-title {
+    margin-bottom: 10px;
+    letter-spacing: 2.5px;
+    @include font(15, 1.2, #222222, 700, uppercase, $Mont);
+}
+
+.small-description {
+    @include font(16, 1.5, #989898, 400, 0, $OpenSans);
+    @include fluid-font($xSmall, $xxxLarge, 1rem, 1.25rem);
+}
+
+.block-title {
+    margin-bottom: 20px;
+    @include font(25, 1.23, #333333, 300, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 3rem, 5rem);
+}
+
+.instagram-description {
+    @include font(22, 1.25, #555555, 300, 0, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.4rem, 2.25rem);
+}
+
+.benefit-item-text {
+    @include font(14, 1.25, $whiteColor, 200, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.4rem, 1.5rem);
+}
+
+.make-feature-text {
+    @include font(22, 1.26, #222222, 400, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.6rem, 1.875rem);
+}
+
+.blog-title {
+    @include font(20, 1.23, #4b4e53, 600, uppercase, $Mont);
+    @include fluid-font($large, $xxxLarge, 1.4rem, 1.5rem);
+}
+
+.blog-description {
+    @include font(14, 1.5, #7e8082, 400, 0, $OpenSans);
+}
+
+.read-more {
+    @include font(14, 1.5, #4b4e53, 600, uppercase, $OpenSans);
+}
+
+.blog-subtitle {
+    @include font(18, 1.5, #4b4e53, 600, uppercase, $Mont);
+}
+
+.comment-title {
+    @include font(18, 1.5, #4b4e53, 400, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.4rem, 1.5rem);
+}
+
+.comment-name {
+    @include font(14, 1.5, #4b4e53, 600, uppercase, $Mont);
+}
+
+.comment-date {
+    @include font(14, 1.5, #8f9092, 400, uppercase, $OpenSans);
+}
+
+.comment-text {
+    @include font(14, 1.5, #7e8082, 400, 0, $OpenSans);
+}
+
+.reply-btn {
+
+    span {
+        @include font(12, 1.5, #7e8082, 400, uppercase, $Mont);
+    }
+}
+
+.related-post-title {
+    @include font(16, 1.5, #4b4e53, 600, uppercase, $Mont);
+}
+
+.related-post-info {
+    @include font(13, 1.5, #4b4e53, 400, uppercase, $Mont);
+}
+
+.review {
+    .name {
+        @include font(18, 1, $whiteColor, 400, 0, $Mont);
+    }
+    .text {
+        @include font(14, 1.5, $whiteColor, 400, 0, $OpenSans);
+    }
+}
+
+.blog-action-item {
+
+    span {
+        @include font(14, 1.5, #4b4e53, 400, uppercase, $Mont);
+    }
+}
+
+.cover-carousel {
+    .swiper-pagination-bullet {
+        @include font(18, 1.23, $whiteColor, 400, 0, $Mont);
+        @include fluid-font($small, $xxxLarge, 1.3rem, 2rem);
+    }
+}
+
+.story-label {
+    @include font(16, 1.23, #333333, 200, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.1rem, 1.125rem);
+}
+
+.collection-title {
+    @include font(25, 1, $whiteColor, 300, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 2rem, 2.625rem);
+}
+
+.collection-description {
+    @include font(16, 1.57, $whiteColor, 400, uppercase, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 1.1rem, 1.1875rem);
+}
+
+.gal-title {
+    @include font(22, 1.3, #4b4e53, 200, 0, $Mont);
+    @include fluid-font($xSmall, $xxxLarge, 2.25rem, 3.75rem);
+}
+
+.date {
+
+    a {
+        @include font(16, 1.25, #4b4e53, 400, uppercase, $Mont);
+        @include fluid-font($xSmall, $xxxLarge, 1.05rem, 1.125rem);
+    }
+}
+
+.alphabet {
+
+    a {
+        @include font(1, 1.93, #4b4e53, 300, uppercase, $Mont);
+        @include fluid-font($xSmall, $xxxLarge, 1.5rem, 1.875rem);
+    }
+}
+
+.more-description {
+    @include font(15, 1.46, $whiteColor, 400, 0, $OpenSans);
+}
+
+.brand-description {
+    @include font(16, 1.37, #7e8082, 400, 0, $OpenSans);
+    @include fluid-font($xSmall, $xxxLarge, 1.2rem, 1.25rem);
+}
+
+.contact-title {
+    @include font(22, 1.7, #4b4e53, 300, uppercase, $Mont);
+}
+
+.aside-title {
+    @include font(18, 1.7, #4b4e53, 600, uppercase, $Mont);
+}
+
+.content-in-title {
+    @include font(24, 1.25, #4b4e53, 300, uppercase, $Mont);
+}
+
+.richText {
+    @include font(14, 1.5, #4b4e53, 400, 0, $OpenSans);
+}
+
+.get-in-touch-title {
+    @include font(24, 1.5, #4b4e53, 600, uppercase, $OpenSans);
+}
+
+.footer-nav-title {
+    @include font(18, 1.16, $whiteColor, 600, uppercase, $Mont);
+}
+
+.footer-description {
+    @include font(14, 1.7, #cccdce, 400, 0, $OpenSans);
+}
+
+.copyright {
+    @include font(12, 1.7, $whiteColor, 400, 0, $OpenSans);
+}
+
+.footer-nav-links {
+    a {
+        @include font(14, 1.285, rgba(255,255,255, 0.65), 400, uppercase, $OpenSans);
+    }
+}
+
+.footer-nav-info {
+
+    * {
+        @include font(14, 1.285, rgba(255,255,255, 0.65), 400, uppercase, $OpenSans);
+    }
+}
+
+.subscribe-form {
+    input {
+        @include font(14, 1, $whiteColor, 400, 0, $OpenSans);
+    }
+}
+
+.search-wrapper {
+
+    input {
+        @include font(24, 1.7, $whiteColor, 400, 0, $Mont);
+    }
+}
+
+blockquote {
+    font: 200 italic 1.0625rem/1.5 Mont;
+    @include fluid-font($xSmall, $xxxLarge, 1.3rem, 1.5rem);
+}

@@ -1,0 +1,22 @@
+.breadcrumbs {
+  a {
+    position: relative;
+    @include font(14, 1.57, #4b4e53, 400, 0, $OpenSans);
+
+    &.active {
+      font-weight: 700;
+    }
+    &:not(:last-child) {
+        margin-right: 18px;
+      &:after {
+        content: '/';
+        position: absolute;
+        right: -10px;
+        @include font(14, 1.57, #4b4e53, 400, 0, $OpenSans);
+      }
+    }
+  }
+    @media (max-width: $mobile) {
+        margin-top: 5px;
+    }
+}

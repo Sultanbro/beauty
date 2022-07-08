@@ -1,0 +1,160 @@
+body {
+
+  &.modal-opened {
+      overflow: hidden;
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+      z-index: 5;
+    background-color: rgba(0,0,0, 0.9);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 925px;
+  width: 100%;
+  background-color: $whiteColor;
+  transition: all 0.3s $easing;
+
+  &-close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+  }
+}
+
+.newsletter {
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+    &-image {
+        flex: 0 0 50%;
+        height: 430px;
+    }
+    &-info {
+        position: relative;
+        flex: 0 0 50%;
+        background-image: url("../img/pattern.jpg");
+        background-repeat: repeat;
+        padding: 80px 45px 0 45px;
+    }
+    &-title {
+        @include font(24, auto, #555555, 400, uppercase, $Mont);
+    }
+    &-description {
+        margin-top: 15px;
+        margin-bottom: 8px;
+        color: #666666;
+        font: 300 italic .875rem/1.7 Mont;
+    }
+    form {
+
+        input {
+            margin-bottom: 32px;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #e8e8e8;
+            padding: 0 14px;
+            @include font(13, 1, #888888, 300, 0, $Mont);
+        }
+        button {
+            border: 0;
+            margin-bottom: 25px;
+            padding:  16px 45px;
+            background-color: #818181;
+            @include font(12, 1, $whiteColor, 600, uppercase, $Mont);
+        }
+    }
+    @media (max-width: $mobile) {
+        display: none !important;
+    }
+}
+
+.newsletter-title {
+    @include font(24, 1.2, #333333, 400, uppercase, $Mont);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    @include font(12, 1.2, #555555, 700, uppercase, $OpenSans);
+}
+
+#not-show {
+
+    ~ label {
+        font: 300 italic .8125rem/1.2 Mont;
+    }
+}
+
+.newsletter-in {
+
+    @media (max-width: $mobile) {
+        flex-flow: column;
+    }
+}
+
+.price-modal {
+    display: none;
+    max-width: 465px;
+    padding-top: 84px;
+    padding-bottom: 35px;
+    background-image: url("../img/pattern.jpg");
+    background-repeat: repeat;
+    &.active {
+        display: block;
+    }
+    &-title {
+        @include font(24, 1.2, #333333, 400, uppercase, $Mont);
+    }
+    form {
+        margin-top: 25px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+.field {
+    margin-bottom: 5px;
+    flex: 1;
+    select, input {
+        border: 1px solid #e8e8e8;
+        background-color: white;
+        height: 45px;
+        width: 100%;
+        @include font(13, 1.2, #888888, 300, 0, $Mont);
+        padding: 0 14px;
+    }
+    &-wrapper {
+        column-gap: 10px;
+    }
+}
+
+#confirm {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    ~ label {
+        font: 300 italic .8125rem/1.2 Mont;
+    }
+}

@@ -1,0 +1,37 @@
+.main-content {
+    margin-top: 70px;
+}
+
+.aside-links {
+    margin-top: 25px;
+    div {
+        margin-bottom: 18px;
+    }
+    a {
+        @include font(14, 1.25, #555555, 400, uppercase, $OpenSans);
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+.content-in {
+
+    &-title {
+        padding-bottom: 22px;
+        border-bottom: 1px solid #333333;
+        margin-bottom: 25px;
+    }
+}
+
+
+.get-in-touch-block {
+    margin-top: 52px;
+    padding-top: 48px;
+    border-top: 1px solid #333333;
+}
+
+.get-in-touch-title {
+    margin-bottom: 38px;
+}

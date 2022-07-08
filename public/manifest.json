@@ -1,0 +1,15 @@
+{
+  "short_name": "Hayly",
+  "theme_color": "#c62327",
+  "background_color":"#f2f1e9",
+  "display":"standalone",
+  "name": " Hayly",
+  "icons": [
+    {
+      "src": "assets/img/fav-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://arefoundation.com/"
+}

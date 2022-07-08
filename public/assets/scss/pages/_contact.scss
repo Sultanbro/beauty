@@ -1,0 +1,82 @@
+.contact-wrap {
+    width: 100%;
+}
+
+.map {
+
+    @media (max-width: $mobile) {
+        height: 300px;
+    }
+}
+
+.contact-info {
+    padding-top: 48px;
+    padding-bottom: 44px;
+    background-color: #f8f8f8;
+}
+
+.contact-item {
+
+    >div {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 22px;
+        margin-left: 32px;
+        border-left: 2px solid #a1a3a5;
+
+        span {
+            @include font(16, 1.7, #4b4e53, 600, uppercase, $Mont);
+        }
+        div {
+            @include font(12, 1.2, #4b4e53, 400, 0, $OpenSans);
+        }
+    }
+    @media (max-width: $mobile) {
+        justify-content: flex-start;
+    }
+}
+
+.get-in-touch {
+    margin-top: 132px;
+
+    @media (max-width: $mobile) {
+        margin-top: 80px;
+    }
+}
+
+.contact-description {
+    margin-top: 42px;
+    margin-bottom: 60px;
+    font: 200 italic .875rem/1.7 Mont;
+    color: #606060;
+}
+
+.contact-form {
+    margin-bottom: 160px;
+    .field {
+        margin-bottom: 30px;
+    }
+    label {
+        display: block;
+        margin-bottom: 18px;
+        @include font(14, 1.42, #333333, 400, 0, $OpenSans);
+    }
+    input, textarea {
+        outline: none;
+        width: 100%;
+        padding: 0 15px;
+        border: 1px solid #dddddd;
+        @include font(13, 1.538, #888888, 300, 0, $OpenSans);
+    }
+    textarea {
+        padding-top: 14px;
+        resize: vertical;
+    }
+    input  {
+        height: 50px;
+    }
+    button {
+        justify-content: center;
+        width: 100%;
+    }
+}

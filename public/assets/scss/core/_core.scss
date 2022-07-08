@@ -1,0 +1,39 @@
+:root {
+  --baseFontSize: 16;
+  --rowWidth: 91.5rem;
+  --columns: 12;
+  --columnSpace: 1rem;
+  --whiteColor: white;
+  --blackColor: black;
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 $screenSpace 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box
+}
+
+a {
+  text-decoration: none
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto
+}

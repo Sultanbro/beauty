@@ -1,0 +1,361 @@
+.brands {
+  border-top: 1px solid #454545;
+}
+
+.top {
+  margin-top: 4%;
+  padding-bottom: 3.5%;
+  border-bottom: 1px solid #454545;
+
+    @media (max-width: $mobile) {
+        .column {
+            padding: 0;
+        }
+    }
+}
+
+.top-container {
+
+    @media (max-width: $mobile) {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.alphabet {
+  margin-top: 5%;
+  margin-bottom: 7.5%;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  a {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 7px;
+        width: 28px;
+        height: 2px;
+        background-color: #333333;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    &.active {
+      font-weight: 700;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.grid-wrapper {
+    @media (max-width: $mobile) {
+        margin-top: 30px;
+    }
+}
+
+.brand-item {
+  margin-bottom: 10px;
+
+    @media (max-width: $mobile) {
+        flex-flow: column;
+        margin-bottom: 20px;
+    }
+}
+
+.brand-list-slide-item {
+
+    >div {
+        position: relative;
+
+        &:nth-child(1) {
+            height: 22.7vw;
+        }
+
+        @media (max-width: $mobile) {
+
+            &:nth-child(1) {
+                height: 350px;
+            }
+        }
+        &:nth-child(1) {
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0,0,0, 0.4);
+                transition: all 0.3s ease;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+
+    &:hover {
+        >div {
+            &:after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    >div {
+        @media (max-width: $mobile) {
+            margin-bottom: 20px;
+        }
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.brand-info-wrapper {
+  flex: 0 0 50%;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+    padding-left: 5%;
+
+    @media (max-width: $mobile) {
+        padding-left: 0;
+        border: 0;
+    }
+}
+
+.brand-info {
+  max-width: 380px;
+  width: 100%;
+}
+
+.more-details {
+    margin-top: 125px;
+    padding: 2.5% 9% 3%;
+    background-color: #181818;
+
+    @media (max-width: $mobile) {
+        padding: 30px 10px 30px;
+    }
+}
+
+.more-description {
+  margin-top: 30px;
+  margin-bottom: 55px;
+
+    @media (max-width: $mobile) {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.brands-single {
+    margin-top: 70px;
+    margin-bottom: 14px;
+    background-color: #f8f8f8;
+    color: #4b4e53;
+
+    @media (max-width: $mobile) {
+        margin-top: 30px;
+        flex-flow: column;
+    }
+}
+
+.brand-img {
+    flex: 0 0 49.5%;
+
+    @media (max-width: $mobile) {
+        flex: 0 0 100%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.brand-in {
+    padding: 2.5% 4.5%;
+
+    @media (max-width: $mobile) {
+        padding: 15px;
+    }
+}
+
+.brand-information {
+    border-bottom: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    padding-bottom: 22px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.brand-inform {
+    margin-top: 9%;
+    span {
+        display: block;
+    }
+    .brand-inform-bold {
+        margin-right: 10.5%;
+        span {
+            @include font(16, 1.9375, #4b4e53, 600, 0, $Mont);
+        }
+    }
+    .brand-inform-light {
+        span {
+            @include font(16, 1.9375, #7e8082, 400, 0, $OpenSans);
+        }
+    }
+}
+
+.brand-socials {
+    margin-top: 30px;
+
+    a {
+        margin-right: 20px;
+
+        img {
+            height: 16px;
+            opacity: 0.4;
+        }
+    }
+}
+
+.brand-images-column {
+    flex: 0 0 50%;
+    flex-flow: row wrap;
+}
+
+.brand-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    //grid-template-rows: 0.6fr 0.6fr 1fr;
+    gap: 14px 14px;
+    grid-template-areas:
+        "grid-1 grid-2 grid-4 grid-4"
+        "grid-1 grid-3 grid-4 grid-4"
+        "grid-5 grid-5 grid-6 grid-7";
+
+    @media (max-width: $mobile) {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        >div {
+            @media (max-width: $mobile) {
+                flex: 0 0 90%;
+                margin-right: 10px;
+            }
+        }
+    }
+    >div {
+        >div {
+            height: 100%;
+        }
+    }
+}
+.grid-1 { grid-area: grid-1; }
+.grid-2 { grid-area: grid-2; }
+.grid-3 { grid-area: grid-3; }
+.grid-4 { grid-area: grid-4; }
+.grid-5 { grid-area: grid-5; }
+.grid-6 { grid-area: grid-6; }
+.grid-7 { grid-area: grid-7; }
+
+
+.brand-navigation {
+    position: relative;
+    margin-top: 115px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+}
+
+.brand-list-link-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item {
+    span {
+        margin-left: 18px;
+        margin-right: 18px;
+        @include font(14, 1, #4b4e53, 400, uppercase, $OpenSans);
+
+        @media (max-width: $mobile) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.brands-carousel {
+    position: relative;
+
+    .brend-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255,255,255, 0.8);
+        transition: all 0.3s ease;
+        visibility: hidden;
+        opacity: 0;
+        cursor: pointer;
+
+        img {
+            transition: all 0.3s ease;
+            filter: brightness(1) invert(0);
+            width: 10px;
+        }
+        @media (max-width: $mobile) {
+            opacity: 1;
+            top: 37%;
+        }
+    }
+
+    .prev {
+        left: 10px;
+
+        @media (max-width: $mobile) {
+            left: 0;
+        }
+    }
+    .next {
+        right: 10px;
+
+        @media (max-width: $mobile) {
+            right: 0;
+        }
+    }
+    &:hover {
+        .prev, .next {
+            visibility: visible;
+            opacity: 1;
+
+            &:hover {
+                background-color: #333333;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+}

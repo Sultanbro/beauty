@@ -1,0 +1,23 @@
+.pagination {
+    margin-top: 110px;
+    margin-bottom: 110px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        @include font(14, 1, #7e8082, 400, 0, $OpenSans);
+
+        &.active {
+            color: $whiteColor;
+            background-color: #4b4e53;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        margin-top: 30px;
+    }
+}
