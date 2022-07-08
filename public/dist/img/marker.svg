@@ -1,0 +1,31 @@
+<svg id="marker" xmlns="http://www.w3.org/2000/svg" width="65.438" height="79.25" viewBox="0 0 65.438 79.25">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #000;
+        stroke-width: 1px;
+      }
+
+      .cls-3 {
+        font-size: 15px;
+        font-family: Mont;
+      }
+    </style>
+  </defs>
+  <path id="Form" class="cls-1" d="M922.006,399.073h23.042l-11.06,16.59h0Z" transform="translate(-900.812 -336.406)"/>
+  <path id="form-2" data-name="form" class="cls-1" d="M933.527,336.4a32.72,32.72,0,1,1-32.719,32.719A32.719,32.719,0,0,1,933.527,336.4Z" transform="translate(-900.812 -336.406)"/>
+  <g id="logo_" data-name="logo ">
+    <circle class="cls-2" cx="32.188" cy="32.594" r="29"/>
+    <text id="B" class="cls-3" transform="translate(36.073 43.951) scale(0.922)">B</text>
+    <path id="Line_2" data-name="Line 2" class="cls-4" d="M943.33,351.929l-20.66,32.142Z" transform="translate(-900.812 -336.406)"/>
+    <text id="A" class="cls-3" transform="translate(19.072 28.95) scale(0.922)">A</text>
+  </g>
+</svg>
