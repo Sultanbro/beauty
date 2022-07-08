@@ -30,12 +30,12 @@
         <link rel="manifest" href="manifest.json"/>
         <meta name="theme-color" content="#0c101b"/>
         <title>american group</title>
-        <link rel="stylesheet" href="{{ asset('dist/css/en.min.css?v=1') }}"/>
-        <link rel="stylesheet" href="{{ asset ('am-beauty/css/swiper-bundle.min.css?v=1') }}">
-        <link rel="stylesheet" href="{{ asset('dist/css/app-new.css?v=1') }}"/>
+        <link rel="stylesheet" href="{{ asset('dist/css/en.min.css?v=2') }}"/>
+        <link rel="stylesheet" href="{{ asset ('am-beauty/css/swiper-bundle.min.css?v=2') }}">
+        <link rel="stylesheet" href="{{ asset('dist/css/app-new.css?v=2') }}"/>
         <link rel="stylesheet" href="{{ asset ('am-beauty/css/style.css') }}">
         @if(app()->getLocale() == 'ru')
-            <link rel="stylesheet" href="{{ asset('dist/css/ru.min.css?v=1') }}"/>
+            <link rel="stylesheet" href="{{ asset('dist/css/ru.min.css?v=2') }}"/>
         @endif
 {{--        <link rel="stylesheet" href="{{ asset('dist/css/app.min.css?v=1') }}"/>--}}
 {{--        <script defer src="{{ asset('dist/js/main.min.js?v=3') }}"></script>--}}
