@@ -30,21 +30,21 @@
         <link rel="manifest" href="manifest.json"/>
         <meta name="theme-color" content="#0c101b"/>
         <title>american group</title>
-        <link rel="stylesheet" href="{{ asset('dist/css/en.min.css?v=2') }}"/>
-        <link rel="stylesheet" href="{{ asset ('am-beauty/css/swiper-bundle.min.css?v=2') }}">
-        <link rel="stylesheet" href="{{ asset('dist/css/app-new.css?v=2') }}"/>
-        <link rel="stylesheet" href="{{ asset ('am-beauty/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('dist/css/en.min.css?v='.time ()) }}"/>
+        <link rel="stylesheet" href="{{ asset ('am-beauty/css/swiper-bundle.min.css?v='.time ()) }}">
+        <link rel="stylesheet" href="{{ asset('dist/css/app-new.css?v='.time ()) }}"/>
+        <link rel="stylesheet" href="{{ asset ('am-beauty/css/style.css?v='.time ()) }}">
         @if(app()->getLocale() == 'ru')
-            <link rel="stylesheet" href="{{ asset('dist/css/ru.min.css?v=2') }}"/>
+            <link rel="stylesheet" href="{{ asset('dist/css/ru.min.css?v='.time ()) }}"/>
         @endif
 {{--        <link rel="stylesheet" href="{{ asset('dist/css/app.min.css?v=1') }}"/>--}}
 {{--        <script defer src="{{ asset('dist/js/main.min.js?v=3') }}"></script>--}}
-        <script defer src="{{ asset('dist/js/main-new.js?v=3') }}"></script>
+        <script defer src="{{ asset('dist/js/main-new.js?v='.time ()) }}"></script>
         @yield('head')
-        <script src="{{ asset ('assets/js/libs/jquery.min.js?v=1') }}"></script>
-        <script src="{{ asset ('assets/js/libs/swiper-bundle.js?v=1') }}"></script>
-        <script src="{{ asset ('assets/js/libs/simplebar.min.js?v=1') }}"></script>
-        <script src="{{ asset ('am-beauty/common.js?v=1') }}"></script>
+        <script src="{{ asset ('assets/js/libs/jquery.min.js?v='.time ()) }}"></script>
+        <script src="{{ asset ('assets/js/libs/swiper-bundle.js?v='.time ()) }}"></script>
+        <script src="{{ asset ('assets/js/libs/simplebar.min.js?v='.time ()) }}"></script>
+        <script src="{{ asset ('am-beauty/common.js?v='.time ()) }}"></script>
     </head>
     <body>
 

@@ -42,6 +42,7 @@
                     <!----></li>
                 <li class=""><a target="_self" href="/admin/tags"><span class="title">Tags</span></a> <!----></li>
                 <li class=""><a target="_self" href="/admin/words"><span class="title">Words</span></a> <!----></li>
+                <li class=""><a target="_self" href="/admin/blog-description-sections"><span class="title">Blog Description Sections</span></a> <!----></li>
                 <li class=""><a target="_self" href="/admin/authors"><span class="title">Authors</span></a> <!----></li>
                 <li class=""><a target="_self" href="/admin/site-settings"><span class="title">Site Settings</span></a> <!----></li>
                 <li class=""><a target="_self" href="{{ route ('voyager.database.index') }}"><span class="title">Database</span></a> <!----></li>

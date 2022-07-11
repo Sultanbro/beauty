@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Author;
 use App\Brand;
 use App\Models\Blog;
+use App\Models\BlogDescriptionSection;
 use App\Models\Category;
 use App\Models\Word;
 use Illuminate\Http\Request;
@@ -41,6 +42,8 @@ class BlogController extends Controller
                 $q->withTranslation($locale);
             }, 'author' => function($q) use ($locale) {
                 $q->withTranslation($locale);
+            }, 'blogDescriptionSections' => function($q) use($locale) {
+                $q->withTranslation($locale);
             }])->first();
         $categories = Category::withTranslation(\App::getLocale())->get();
 
@@ -69,7 +72,7 @@ class BlogController extends Controller
             'lastPosts' => $lastPosts,
             'author' => $author,
             'related' => $related,
-            'wingedWords' => $wingedWords
+            'wingedWords' => $wingedWords,
         ]);
     }
 

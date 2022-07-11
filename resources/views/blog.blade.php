@@ -110,7 +110,7 @@
                     </div>
                     <div class="flex-container flex-row-wrap blog-item-categories">
                     <span>
-                        {{formatCreatedAt($item->created_at)}}
+                        {{$item->created_at ? formatCreatedAt($item->created_at) : ''}}
 {{--                        21 December, 2021--}}
                     </span>
                         <span>

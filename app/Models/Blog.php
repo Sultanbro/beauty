@@ -5,12 +5,15 @@ namespace App\Models;
 use App\Author;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use TCG\Voyager\Traits\Translatable;
 
 class Blog extends Model
 {
     use HasFactory;
     use Translatable;
+
+    public $timestamps = true;
 
     protected $fillable = [
         'description_2_title',
@@ -75,5 +78,13 @@ class Blog extends Model
     public function author()
     {
         return $this->belongsTo(Author::class, 'author', 'id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function blogDescriptionSections(): BelongsToMany
+    {
+        return $this->belongsToMany (BlogDescriptionSection::class, 'blog_description_section_blogs', 'blog_id', 'blog_description_section_id')->withTimestamps ('created_at', 'updated_at');
     }
 }

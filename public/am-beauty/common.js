@@ -20,24 +20,23 @@ jQuery(document).ready(function ($) {
         },
       });
 
-    var swiper1 = new Swiper(".mySwiper1", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        pagination: {
-            el: ".blog-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-            },
+    $('.blog-next').on('click', function() {
+        var currentImg = $('.active');
+        var nextImg = currentImg.next();
 
-        },
-        navigation: {
-            nextEl: ".blog-prev",
-            prevEl: ".blog-next",
-        },
+        if(nextImg.length) {
+            currentImg.removeClass('active').css('z-index', -10);
+            nextImg.addClass('active').css('z-index', 10);
+        }
+    });
+
+    $('.blog-prev').on('click', function() {
+        var currentImg = $('.active');
+        var prevImg = currentImg.prev();
+
+        if(prevImg.length) {
+            currentImg.removeClass('active').css('z-index', -10);
+            prevImg.addClass('active').css('z-index', 10);
+        }
     });
 });

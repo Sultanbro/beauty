@@ -246,6 +246,12 @@ h1{
 .slide-images .slide-image img{
     width: 100%;
 }
+.blog {
+    display: none;
+}
+.blog.active {
+    display: flex;
+}
 .blog-post-brands__title{
     text-transform: uppercase;
     font-size: 36px;
@@ -325,6 +331,7 @@ h1{
 }
 .website-info {
     padding: 23px 30px;
+    margin-left: -65px
 }
 .blog-logo{
     width: 123px;
@@ -399,6 +406,36 @@ h1{
 .mySwiper img{
     width: 100%;
 }
+
+.blog-info h4, p {
+    /*display: none;*/
+}
+
+.slider-inner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    padding: 3px;
+    /*border: #666 solid 1px;*/
+}
+
+.slider-inner img {
+    display: none;
+    width: 100px;
+    height: 100px;
+}
+
+.slider-inner img.active {
+    display: inline-block;
+}
+
+.blog-prev img, .blog-next img{
+    cursor: pointer;
+}
+/*end of winged words*/
+
 @media screen and (max-width: 1200px) {
     .container {
         padding: 0 20px;
@@ -619,6 +656,7 @@ h1{
     }
     .blog-logo {
         width: 65px;
+        height: 100px;
     }
     .blog-info{
         width: calc(100% - 65px);
@@ -630,6 +668,7 @@ h1{
     }
     .website-info {
         padding: 29px 13px;
+        margin-left: -65px
     }
     .website-info .blog-info{
         font-size: 10px;
@@ -647,6 +686,7 @@ h1{
     .blog-prev img, .blog-next img{
         width: 8px;
         height: 14px;
+        cursor: pointer;
     }
     .blog-pagination-wrap {
         margin-left: -15px;
