@@ -442,7 +442,7 @@ $images = json_decode ($post->image);
                     <div class="blog-pagination-wrap">
                         <div class="website-info">
                             <div class="row">
-                                @foreach($wingedWords as $word)
+                                @foreach($post->wingedWords as $word)
                                     <div class="blog row {{ $loop->index === 0 ? 'active' : null }}">
                                         <div class="blog-logo">
                                                 {{--<img src="{{ asset("am-beauty/img/blog-logo.png") }}" alt="">--}}

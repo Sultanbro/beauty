@@ -87,4 +87,12 @@ class Blog extends Model
     {
         return $this->belongsToMany (BlogDescriptionSection::class, 'blog_description_section_blogs', 'blog_id', 'blog_description_section_id')->withTimestamps ('created_at', 'updated_at');
     }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function wingedWords(): BelongsToMany
+    {
+        return $this->belongsToMany (Word::class, 'blog_words', 'blog_id', 'word_id')->withTimestamps ('created_at', 'updated_at');
+    }
 }

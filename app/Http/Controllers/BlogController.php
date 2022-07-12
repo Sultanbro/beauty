@@ -44,6 +44,8 @@ class BlogController extends Controller
                 $q->withTranslation($locale);
             }, 'blogDescriptionSections' => function($q) use($locale) {
                 $q->withTranslation($locale);
+            }, 'wingedWords' => function($q) use($locale) {
+                $q->withTranslation($locale);
             }])->first();
         $categories = Category::withTranslation(\App::getLocale())->get();
 
