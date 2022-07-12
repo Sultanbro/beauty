@@ -217,21 +217,24 @@ $images = json_decode ($post->image);
 
                                 {!! $post->getTranslatedAttribute('carousel_description', \App::getLocale()) !!}
                             </div>
-                            <div class="swiper-button-next">
-                                <svg width="11" height="18" viewBox="0 0 11 18" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="1.13112" height="12.7853"
-                                          transform="matrix(0.756759 -0.653694 0.756759 0.653694 0.0932617 1.40601)"/>
-                                    <rect width="1.13112" height="12.4423"
-                                          transform="matrix(-0.756759 -0.653694 -0.756759 0.653694 10.365 9.24902)"/>
-                                </svg>
-                            </div>
-                            <div class="swiper-button-prev">
-                                <svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="1.13112" height="12.7853"
-                                          transform="matrix(-0.756759 0.653694 -0.756759 -0.653694 11.2401 16.5938)"/>
-                                    <rect width="1.13112" height="12.4423"
-                                          transform="matrix(0.756759 0.653694 0.756759 -0.653694 0.968262 8.75098)"/>
-                                </svg>
+
+                            <div class="prev-next-buttons-block">
+                                <div class="swiper-button-next">
+                                    <svg width="11" height="18" viewBox="0 0 11 18" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1.13112" height="12.7853"
+                                              transform="matrix(0.756759 -0.653694 0.756759 0.653694 0.0932617 1.40601)"/>
+                                        <rect width="1.13112" height="12.4423"
+                                              transform="matrix(-0.756759 -0.653694 -0.756759 0.653694 10.365 9.24902)"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="1.13112" height="12.7853"
+                                              transform="matrix(-0.756759 0.653694 -0.756759 -0.653694 11.2401 16.5938)"/>
+                                        <rect width="1.13112" height="12.4423"
+                                              transform="matrix(0.756759 0.653694 0.756759 -0.653694 0.968262 8.75098)"/>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper mySwiper">
