@@ -65,7 +65,7 @@ $images = json_decode ($post->image);
             <div class="post__content">
                 <div class="container">
                     <div class="row">
-                        <div class="column">
+                        <div class="column column-left">
                             {{--<h3>31 августа - 2 сентября в Москве состоится презентация сезона 2022 от American Beauty Group.</h3>--}}
 
                             @if(isset($post->description_2_title))
@@ -75,7 +75,7 @@ $images = json_decode ($post->image);
                             {{--                            <p>В уютном лофте на территории Трёхгорной мануфактуры наша компания представит 15 мировых брендов купальников, пляжной и спортивной одежды. В рамка презентации, гостям мероприятия будут представлены уже известные и популярные в России марки и совершенно новые для рынка имена.</p>--}}
                             {!! $post->getTranslatedAttribute('description_2', \App::getLocale()) !!}
                         </div>
-                        <div class="column">
+                        <div class="column column-right">
                             {{-- <h3>В рамках ежедневной программы все гости смогут:</h3>--}}
 
                             @if(isset($post->description_3_title))
@@ -399,7 +399,7 @@ $images = json_decode ($post->image);
         <section class="blog-post-contacts">
             <div class="container">
                 <div class="row">
-                    <div class="column">
+                    <div class="column column-info-left">
                         {{--<h3>Ждем Вас по адресу:</h3>
                         <div class="blog-post-contacts__address">
                             <p>Г. Москва, ул. Рочдельская, д. 15, стр. 16 (в пешей доступности от ЦВК «Экспоцентр»)<p>
@@ -408,7 +408,7 @@ $images = json_decode ($post->image);
 
                         {!! $post->getTranslatedAttribute('info_left_column', \App::getLocale()) !!}
                     </div>
-                    <div class="column">
+                    <div class="column column-info-right">
                         {{--<h3>Заказ пригласительных:</h3>
                         <div class="blog-post-contacts__phone">
                             <a href="tel:+7(499)1109764">+7 (499) 110 – 97 – 64</a>
