@@ -392,17 +392,18 @@ h1{
 .blog-slider .container{
     background: #F8F8F8;
     padding: 30px;
-    padding-left: 45px;
+    padding-left: 78px;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
 .blog-slider .slide-content{
     width: 30%;
-    margin-right: 75px;
+    margin-right: 65px;
     padding-top: 55px;
     position: relative;
     box-sizing: border-box;
     height: 100%;
+    margin-left: -26px;
 }
 .prev-next-buttons-block {
     margin-top: 145px;
