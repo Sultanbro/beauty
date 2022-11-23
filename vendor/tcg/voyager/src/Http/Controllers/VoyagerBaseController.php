@@ -109,7 +109,7 @@ class VoyagerBaseController extends Controller
                     ])->leftJoin(
                         $row->details->table.' as joined',
                         $dataType->name.'.'.$row->details->column,
-                        'joined.'.$row->details->key,
+                        'joined.'.$row->details->key
                     );
                 }
 
@@ -492,6 +492,9 @@ class VoyagerBaseController extends Controller
             // Single item delete, get ID from URL
             $ids[] = $id;
         }
+
+        $affected = 0;
+        
         foreach ($ids as $id) {
             $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
 
@@ -502,12 +505,19 @@ class VoyagerBaseController extends Controller
             if (!($model && in_array(SoftDeletes::class, class_uses_recursive($model)))) {
                 $this->cleanup($dataType, $data);
             }
+
+            $res = $data->delete();
+
+            if ($res) {
+                $affected++;
+
+                event(new BreadDataDeleted($dataType, $data));
+            }
         }
 
-        $displayName = count($ids) > 1 ? $dataType->getTranslatedAttribute('display_name_plural') : $dataType->getTranslatedAttribute('display_name_singular');
+        $displayName = $affected > 1 ? $dataType->getTranslatedAttribute('display_name_plural') : $dataType->getTranslatedAttribute('display_name_singular');
 
-        $res = $data->destroy($ids);
-        $data = $res
+        $data = $affected
             ? [
                 'message'    => __('voyager::generic.successfully_deleted')." {$displayName}",
                 'alert-type' => 'success',
@@ -516,10 +526,6 @@ class VoyagerBaseController extends Controller
                 'message'    => __('voyager::generic.error_deleting')." {$displayName}",
                 'alert-type' => 'error',
             ];
-
-        if ($res) {
-            event(new BreadDataDeleted($dataType, $data));
-        }
 
         return redirect()->route("voyager.{$dataType->slug}.index")->with($data);
     }
@@ -857,6 +863,10 @@ class VoyagerBaseController extends Controller
 
     public function action(Request $request)
     {
+        if (!$request->action || !class_exists($request->action)) {
+            throw new \Exception("Action {$request->action} doesn't exist or has not been defined");
+        }
+
         $slug = $this->getSlug($request);
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 
@@ -907,7 +917,7 @@ class VoyagerBaseController extends Controller
                 if ($search) {
                     // If we are using additional_attribute as label
                     if (in_array($options->label, $additional_attributes)) {
-                        $relationshipOptions = $model->all();
+                        $relationshipOptions = $model->get();
                         $relationshipOptions = $relationshipOptions->filter(function ($model) use ($search, $options) {
                             return stripos($model->{$options->label}, $search) !== false;
                         });
